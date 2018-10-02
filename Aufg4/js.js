@@ -12,9 +12,8 @@ window.onload = function () {
     
     document.getElementById("first").addEventListener("click", function() {
         var soundNode = context.createMediaElementSource(sound1);
-        soundNode.connect(context);
-        soundNode.start();        
-        alert(inputEl.value);
+        sound1.connect(context.destination);  
+        //alert(inputEl.value);
     });
     document.getElementById("second").addEventListener("click", function() {
         var soundNode = context.createMediaElementSource(sound2);
